@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "ce050423-83cd-4a0d-bbe7-1bba6e512f2c",
+		"name": "department-employee-mapping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23490542"
+	},
+	"item": [
+		{
+			"name": "Add Department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"depId\": 2,\r\n    \"depName\": \"Computer Science\",\r\n    \"employees\": [\r\n        {\r\n            \"empId\": 4,\r\n            \"empName\": \"Huxly Alex\"\r\n        },\r\n        {\r\n            \"empId\": 6,\r\n            \"empName\": \"Alex John\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/department-employee-relation/save_department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"department-employee-relation",
+						"save_department"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/department-employee-relation/getData/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"department-employee-relation",
+						"getData",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
